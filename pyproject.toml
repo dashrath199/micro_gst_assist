@@ -7,4 +7,4 @@ name = "micro_gst_assist"
 authors = [{name = "Bizaxl"}]
 version = "0.1.0"
 description = "GST Compliance Automation for Micro-Enterprises (Sub-10-Employee)"
-dependencies = ["frappe", "erpnext"]
+dependencies = []
