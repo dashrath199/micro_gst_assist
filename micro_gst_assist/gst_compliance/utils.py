@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Shared utilities for GST Compliance Assistant.
+Shared utilities for GST Compliance.
 Provides helper functions used across the module.
 """
 

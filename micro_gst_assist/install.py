@@ -50,7 +50,7 @@ def _number_card(label, document_type, function="Count", filters_json="[]", colo
             "is_public": 1,
             "show_percentage_stats": 0,
             "color": color,
-            "module": "GST Compliance Assistant",
+            "module": "GST Compliance",
         }).insert(ignore_permissions=True)
     except Exception:
         frappe.log_error(frappe.get_traceback(), f"GST Assist install: Number Card '{label}' failed")
@@ -103,7 +103,7 @@ def _create_workspace():
             "doctype": "Workspace",
             "name": "GST Filing Assistant",
             "title": "GST Filing Assistant",
-            "module": "GST Compliance Assistant",
+            "module": "GST Compliance",
             "public": 1,
             "is_hidden": 0,
             "icon": "fa fa-file-text",
