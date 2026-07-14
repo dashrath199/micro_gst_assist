@@ -1,0 +1,98 @@
+{
+ "autoname": "hash",
+ "creation": "2026-07-14 12:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task",
+  "description",
+  "status",
+  "due_date",
+  "column_break_5",
+  "completed_on",
+  "completed_by",
+  "notes",
+  "reference_section",
+  "reference_type",
+  "reference_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Data",
+   "label": "Task",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "The specific action item for GST filing preparation"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "description": "Optional detailed instructions for completing this task"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nIn Progress\nCompleted",
+   "default": "Pending",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Date",
+   "label": "Completed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_by",
+   "fieldtype": "Data",
+   "label": "Completed By",
+   "description": "Name of the person who completed this task"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "description": "Any notes or findings while working on this task"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "reference_type",
+   "fieldtype": "Link",
+   "label": "Reference Document Type",
+   "options": "DocType",
+   "description": "Optional reference to an ERPNext document (e.g., Sales Invoice)"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_type",
+   "description": "The specific document linked to this task"
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-07-14 12:00:00",
+ "modified_by": "Administrator",
+ "module": "GST Compliance Assistant",
+ "name": "Checklist Item",
+ "owner": "Administrator"
+}

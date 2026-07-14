@@ -1,6 +1,0 @@
-[pre_model_sync]
-micro_gst_assist.patches.create_shop_owner_gst_role
-
-[post_model_sync]
-micro_gst_assist.patches.create_filing_workspace
-micro_gst_assist.patches.load_demo_fixtures
