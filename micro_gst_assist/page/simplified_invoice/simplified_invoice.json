@@ -1,0 +1,23 @@
+{
+ "creation": "2026-07-14 12:00:00",
+ "doctype": "Page",
+ "icon": "fa fa-file-text-o",
+ "idx": 0,
+ "modified": "2026-07-14 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Micro GST Assist",
+ "name": "simplified-invoice",
+ "owner": "Administrator",
+ "page_name": "simplified-invoice",
+ "roles": [
+  {
+   "role": "Shop Owner (GST)"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": ".simplified-invoice-container {\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 20px;\n}\n.simplified-invoice-form {\n  background: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n  padding: 24px;\n}\n.form-header {\n  margin-bottom: 24px;\n  padding-bottom: 16px;\n  border-bottom: 2px solid #24963E;\n}\n.form-header h3 {\n  margin: 0 0 8px 0;\n  color: #24963E;\n}\n.form-section {\n  margin-bottom: 24px;\n}\n.section-label {\n  font-weight: 600;\n  color: #333;\n  display: block;\n  margin-bottom: 12px;\n  padding-bottom: 6px;\n  border-bottom: 1px solid #eee;\n}\n.items-table th {\n  background: #f8f9fa;\n  font-size: 13px;\n}\n.totals-display {\n  background: #f8f9fa;\n  border-radius: 6px;\n  padding: 16px;\n  display: inline-block;\n  min-width: 250px;\n}\n.total-row {\n  display: flex;\n  justify-content: space-between;\n  padding: 4px 0;\n}\n.grand-total {\n  font-size: 18px;\n  font-weight: 700;\n  border-top: 2px solid #24963E;\n  margin-top: 8px;\n  padding-top: 8px;\n  color: #24963E;\n}\n.actions-section {\n  padding-top: 16px;\n  border-top: 1px solid #eee;\n}\n.result-section .alert {\n  margin-bottom: 0;\n}\n.add-item-btn {\n  margin-top: 8px;\n}\n.remove-item {\n  padding: 2px 6px !important;\n}"
+}

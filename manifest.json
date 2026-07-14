@@ -1,0 +1,23 @@
+{
+  "app_name": "micro_gst_assist",
+  "app_title": "GST Filing Assistant",
+  "app_publisher": "Bizaxl",
+  "app_description": "GST Compliance Automation for Micro-Enterprises (Sub-10-Employee)",
+  "app_version": "0.1.0",
+  "app_icon": "octicon icon-repo",
+  "app_url": "https://bizaxl.com",
+  "app_email": "info@bizaxl.com",
+  "app_license": "GNU General Public License v3.0",
+  "required_apps": [
+    {
+      "app_name": "india_compliance",
+      "app_url": "https://github.com/resilient-tech/india-compliance",
+      "branch": "version-15"
+    }
+  ],
+  "app_type": "custom",
+  "build_number": 1,
+  "app_github_url": "https://github.com/bizaxl/micro_gst_assist",
+  "app_readme": "README.md",
+  "app_developer_mode": 1
+}

@@ -1,0 +1,169 @@
+{
+ "autoname": "field:gst_filing_checklist_name",
+ "creation": "2026-07-14 12:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gst_filing_checklist_name",
+  "filing_period",
+  "filing_frequency",
+  "composition_scheme",
+  "company",
+  "column_break_6",
+  "due_date",
+  "status",
+  "total_items",
+  "completed_items",
+  "custom_readiness_score",
+  "remarks_section",
+  "remarks",
+  "items_section",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "gst_filing_checklist_name",
+   "fieldtype": "Data",
+   "label": "Checklist Name",
+   "unique": 1,
+   "reqd": 1,
+   "description": "Auto-generated: {filing_period} - {company}"
+  },
+  {
+   "fieldname": "filing_period",
+   "fieldtype": "Data",
+   "label": "Filing Period",
+   "reqd": 1,
+   "description": "e.g., 'Apr 2026' for monthly, 'Q1 2026' for quarterly"
+  },
+  {
+   "fieldname": "filing_frequency",
+   "fieldtype": "Select",
+   "label": "Filing Frequency",
+   "reqd": 1,
+   "options": "\nMonthly\nQuarterly (QRMP)",
+   "description": "QRMP = Quarterly Return with Monthly Payment scheme for small taxpayers"
+  },
+  {
+   "fieldname": "composition_scheme",
+   "fieldtype": "Check",
+   "label": "Composition Scheme",
+   "description": "Tick if the business is registered under the Composition Levy Scheme"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1,
+   "description": "GST return filing due date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nOverdue",
+   "default": "Draft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_items",
+   "fieldtype": "Int",
+   "label": "Total Checklist Items",
+   "read_only": 1,
+   "description": "Auto-calculated from child table"
+  },
+  {
+   "fieldname": "completed_items",
+   "fieldtype": "Int",
+   "label": "Completed Items",
+   "read_only": 1,
+   "description": "Auto-calculated from child table"
+  },
+  {
+   "fieldname": "custom_readiness_score",
+   "fieldtype": "Percent",
+   "label": "Filing Readiness Score",
+   "read_only": 1,
+   "description": "Auto-calculated score based on completion, reconciliation, and time remaining"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks",
+   "description": "Any notes or issues related to this filing period"
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Checklist Items",
+   "options": "Checklist Item",
+   "reqd": 1
+  }
+ ],
+ "icon": "fa fa-check-square-o",
+ "is_submittable": 1,
+ "max_attachments": 3,
+ "modified": "2026-07-14 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Micro GST Assist",
+ "name": "GST Filing Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Shop Owner (GST)",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "due_date",
+ "sort_order": "ASC",
+ "title_field": "gst_filing_checklist_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

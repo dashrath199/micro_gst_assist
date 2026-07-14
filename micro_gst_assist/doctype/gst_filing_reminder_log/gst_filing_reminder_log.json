@@ -1,0 +1,145 @@
+{
+ "autoname": "hash",
+ "creation": "2026-07-14 12:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "checklist",
+  "reminder_type",
+  "urgency",
+  "recipient",
+  "channel",
+  "column_break_6",
+  "sent_at",
+  "delivered_at",
+  "status",
+  "message_section",
+  "message",
+  "error_section",
+  "error_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "checklist",
+   "fieldtype": "Link",
+   "label": "GST Filing Checklist",
+   "options": "GST Filing Checklist",
+   "reqd": 0
+  },
+  {
+   "fieldname": "reminder_type",
+   "fieldtype": "Select",
+   "label": "Reminder Type",
+   "reqd": 1,
+   "options": "\nDeadline Approaching\nMismatch Found\nMissing Fields\nReadiness Report",
+   "description": "Category of the reminder"
+  },
+  {
+   "fieldname": "urgency",
+   "fieldtype": "Select",
+   "label": "Urgency",
+   "options": "\nREMINDER\nWARNING\nCRITICAL",
+   "default": "REMINDER",
+   "description": "Urgency level of the reminder"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "label": "Recipient",
+   "description": "Email or phone number of the recipient"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "Channel",
+   "reqd": 1,
+   "options": "\nSystem Notification\nWhatsApp\nSMS\nEmail",
+   "default": "System Notification",
+   "description": "Which channel the reminder was sent through"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sent_at",
+   "fieldtype": "Datetime",
+   "label": "Sent At",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivered_at",
+   "fieldtype": "Datetime",
+   "label": "Delivered At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "reqd": 1,
+   "options": "\nSent\nDelivered\nFailed",
+   "default": "Sent"
+  },
+  {
+   "fieldname": "message_section",
+   "fieldtype": "Section Break",
+   "label": "Message"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message Content",
+   "description": "Full content of the reminder message"
+  },
+  {
+   "fieldname": "error_section",
+   "fieldtype": "Section Break",
+   "label": "Error Details"
+  },
+  {
+   "fieldname": "error_log",
+   "fieldtype": "Text",
+   "label": "Error Log",
+   "read_only": 1,
+   "description": "Error details if the notification failed to send"
+  }
+ ],
+ "modified": "2026-07-14 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Micro GST Assist",
+ "name": "GST Filing Reminder Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 1,
+   "print": 0,
+   "read": 1,
+   "report": 1,
+   "role": "Shop Owner (GST)",
+   "share": 0,
+   "write": 0
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "checklist,reminder_type,channel,status",
+ "sort_field": "sent_at",
+ "sort_order": "DESC",
+ "track_changes": 0,
+ "track_seen": 0
+}

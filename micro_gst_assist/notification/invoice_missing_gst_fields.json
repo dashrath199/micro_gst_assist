@@ -1,0 +1,17 @@
+{
+ "name": "Invoice Missing GST Fields",
+ "doctype": "Notification",
+ "subject": "GST Fields Missing on Invoice {{ doc.name }}",
+ "document_type": "Sales Invoice",
+ "event": "Before Submit",
+ "condition": "",
+ "message": "<h3>❌ Invoice Blocked: GST Fields Missing</h3>\n\n<p>The following GST fields are missing on invoice <strong>{{ doc.name }}</strong>:</p>\n\n<ul>\n{%- for item in doc.items -%}\n  {%- if not item.gst_hsn_code -%}\n  <li>Item <strong>{{ item.item_code or item.item_name }}</strong> (Row {{ item.idx }}): Missing HSN/SAC code</li>\n  {%- endif -%}\n  {%- if not item.gst_rate -%}\n  <li>Item <strong>{{ item.item_code or item.item_name }}</strong> (Row {{ item.idx }}): Missing GST rate</li>\n  {%- endif -%}\n{%- endfor -%}\n</ul>\n\n<p><strong>Why this matters:</strong> GST returns require HSN codes and rates for every item. Without them, your return cannot be filed correctly.</p>\n\n<p><strong>Action needed:</strong> Please edit the invoice and add the missing GST information before submitting.</p>",
+ "channel": "System Notification",
+ "enabled": 1,
+ "send_to_all_assignees": 1,
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner"
+  }
+ ]
+}

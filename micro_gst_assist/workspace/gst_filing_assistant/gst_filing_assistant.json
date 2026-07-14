@@ -1,0 +1,188 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2026-07-14 12:00:00",
+ "description": "Your GST filing dashboard — only what you need to file on time",
+ "doctype": "Workspace",
+ "icon": "fa fa-file-text",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "GST Filing Assistant",
+ "links": [
+  {
+   "type": "Link",
+   "label": "Transactions",
+   "icon": "fa fa-exchange",
+   "links": [
+    {
+     "type": "Page",
+     "label": "New Sale (Simplified)",
+     "link_to": "simplified-invoice",
+     "dependencies": "",
+     "onboard": 1,
+     "description": "Create invoices with only essential fields"
+    },
+    {
+     "type": "DocType",
+     "label": "Sales Invoice (Full)",
+     "link_to": "Sales Invoice",
+     "dependencies": "",
+     "onboard": 0,
+     "description": "Full ERPNext Sales Invoice form (advanced)"
+    }
+   ]
+  },
+  {
+   "type": "Link",
+   "label": "Filing Preparation",
+   "icon": "fa fa-tasks",
+   "links": [
+    {
+     "type": "DocType",
+     "label": "GST Filing Checklist",
+     "link_to": "GST Filing Checklist",
+     "dependencies": "",
+     "onboard": 1,
+     "description": "Track your GST filing tasks and due dates"
+    },
+    {
+     "type": "DocType",
+     "label": "GST Invoice Audit Log",
+     "link_to": "GST Invoice Audit Log",
+     "dependencies": "",
+     "onboard": 0,
+     "description": "View invoice-by-invoice GST audit status"
+    },
+    {
+     "type": "DocType",
+     "label": "GST Filing Reminder Log",
+     "link_to": "GST Filing Reminder Log",
+     "dependencies": "",
+     "onboard": 0,
+     "description": "Track all reminders and notifications sent"
+    }
+   ]
+  },
+  {
+   "type": "Link",
+   "label": "Reports",
+   "icon": "fa fa-bar-chart",
+   "links": [
+    {
+     "type": "Report",
+     "label": "Filing Readiness Score",
+     "link_to": "Filing Readiness Score",
+     "is_query_report": true,
+     "dependencies": "",
+     "onboard": 1,
+     "description": "Comprehensive readiness assessment"
+    },
+    {
+     "type": "Report",
+     "label": "GSTR-2B Mismatch Summary",
+     "link_to": "GSTR-2B Mismatch Summary",
+     "is_query_report": true,
+     "dependencies": "India Compliance",
+     "onboard": 1,
+     "description": "Vendor invoice mismatches in plain language"
+    },
+    {
+     "type": "Report",
+     "label": "Upcoming Filing Deadlines",
+     "link_to": "Upcoming Filing Deadlines",
+     "is_query_report": true,
+     "dependencies": "",
+     "onboard": 1,
+     "description": "All upcoming deadlines sorted by due date"
+    },
+    {
+     "type": "Report",
+     "label": "Daily GST Summary",
+     "link_to": "Daily GST Summary",
+     "is_query_report": true,
+     "dependencies": "",
+     "onboard": 0,
+     "description": "Today's invoice audit snapshot"
+    }
+   ]
+  }
+ ],
+ "modified": "2026-07-14 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Micro GST Assist",
+ "name": "GST Filing Assistant",
+ "number_cards": [
+  {
+   "label": "Days to Filing Deadline",
+   "type": "Number Card",
+   "document_type": "GST Filing Checklist",
+   "function": "Count",
+   "stats_filter": "{\"status\":[\"!=\",\"Completed\"]}",
+   "aggregate_function_based_on": "due_date",
+   "is_public": 0,
+   "width": "Half"
+  },
+  {
+   "label": "Pending Tasks",
+   "type": "Number Card",
+   "document_type": "GST Filing Checklist",
+   "function": "Sum",
+   "aggregate_function_based_on": "total_items",
+   "stats_filter": "[]",
+   "is_public": 0,
+   "width": "Half"
+  },
+  {
+   "label": "Readiness Score",
+   "type": "Number Card",
+   "document_type": "GST Filing Checklist",
+   "function": "Average",
+   "aggregate_function_based_on": "custom_readiness_score",
+   "stats_filter": "{\"status\":[\"!=\",\"Completed\"]}",
+   "is_public": 0,
+   "width": "Half"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 0,
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "Shop Owner (GST)"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 1,
+ "shortcuts": [
+  {
+   "label": "New Sale",
+   "icon": "fa fa-plus-circle",
+   "format": "Primary",
+   "link_to": "simplified-invoice",
+   "link_type": "Page",
+   "stats_filter": "[]",
+   "description": "Create invoices with only essential fields"
+  },
+  {
+   "label": "Filing Checklist",
+   "icon": "fa fa-check-square-o",
+   "format": "Secondary",
+   "link_to": "GST Filing Checklist",
+   "link_type": "DocType",
+   "stats_filter": "[]",
+   "description": "View current filing period checklist"
+  },
+  {
+   "label": "Readiness Score",
+   "icon": "fa fa-dashboard",
+   "format": "Secondary",
+   "link_to": "Filing Readiness Score",
+   "link_type": "Report",
+   "stats_filter": "[]",
+   "description": "Check if data is ready for filing"
+  }
+ ],
+ "title": "GST Filing Assistant"
+}
