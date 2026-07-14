@@ -1,8 +1,5 @@
 from setuptools import setup, find_packages
 
-with open("requirements.txt") as f:
-    install_requires = f.read().strip().split("\n")
-
 setup(
     name="micro_gst_assist",
     version="0.0.1",
