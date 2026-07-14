@@ -9,7 +9,7 @@ import frappe
 from frappe import _
 from frappe.utils import nowdate, getdate, today, add_days, date_diff
 
-from micro_gst_assist.gst_compliance.utils import notify_user
+from micro_gst_assist.utils import notify_user
 
 
 # ─────────────────────────────────────────────────────────────────

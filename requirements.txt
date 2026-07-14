@@ -1,2 +1,2 @@
 frappe>=15.0.0
-india_compliance>=1.0.0
+erpnext>=15.0.0

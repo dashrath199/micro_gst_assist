@@ -1,1 +1,1 @@
-# micro_gst_assist - Package init
+__version__ = "0.0.1"

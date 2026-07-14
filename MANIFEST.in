@@ -1,0 +1,11 @@
+include *.txt
+include *.md
+include *.py
+recursive-include micro_gst_assist *.py
+recursive-include micro_gst_assist *.js
+recursive-include micro_gst_assist *.css
+recursive-include micro_gst_assist *.json
+recursive-include micro_gst_assist *.html
+recursive-include micro_gst_assist *.svg
+recursive-include micro_gst_assist *.png
+recursive-include micro_gst_assist *.md

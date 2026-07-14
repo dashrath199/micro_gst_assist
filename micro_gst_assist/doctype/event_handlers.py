@@ -6,7 +6,7 @@ Receives (doc, method) from Frappe's document event system.
 
 import frappe
 from frappe import _
-from micro_gst_assist.gst_compliance.utils import extract_gst_totals, auto_populate_gst_rate
+from micro_gst_assist.utils import extract_gst_totals, auto_populate_gst_rate
 
 
 # ─────────────────────────────────────────────────────────────────

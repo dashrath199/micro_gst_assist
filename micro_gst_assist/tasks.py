@@ -6,7 +6,7 @@ Scheduled background tasks for GST readiness scoring.
 import frappe
 from frappe.utils import getdate, add_days, nowdate, date_diff
 
-from micro_gst_assist.gst_compliance.utils import compute_readiness_score, get_period_dates
+from micro_gst_assist.utils import compute_readiness_score, get_period_dates
 
 
 def generate_readiness_scores():

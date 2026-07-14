@@ -8,7 +8,7 @@ import frappe
 from frappe import _
 from frappe.utils import nowdate, flt
 
-from micro_gst_assist.gst_compliance.utils import get_default_company
+from micro_gst_assist.utils import get_default_company
 
 
 @frappe.whitelist()
