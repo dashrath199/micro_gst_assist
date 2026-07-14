@@ -412,7 +412,7 @@ function submit_invoice(page) {
     $('#submit_btn').prop('disabled', true);
 
     frappe.call({
-        method: "micro_gst_assist.api.create_simple_invoice",
+        method: "micro_gst_assist.gst_compliance.api.create_simple_invoice",
         args: {
             party: customer,
             items: items,
